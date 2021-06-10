@@ -1,0 +1,36 @@
+<h1>Add a Unit for review!</h1>
+
+<%= form_for(@unit) do |f|%>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label :descrition %>
+      <%= f.text_field :descrition %>
+    </div>
+
+    <p> Select the faction the unit bleongs to: </P>
+    <div>
+      <%= f.collection_select :faction_id, Faction.all, :id, :name %>
+
+    </div>
+
+    <p> Add a Faction if it does not exist </p>
+    <div>
+      f.fields_for :faction do |a|
+        <%= b.label :name %>
+        <%= b.text_field :name %>
+    </div>
+
+    <%= f.submit "Activate" %>
+   
+<% end %>
+
+
+
+t.string "name"
+t.string "descrition"
+t.integer "faction_id"
+t.integer "user_id"
