@@ -2,12 +2,12 @@ class UnitsController < ApplicationController
 
     def new
         @unit = Unit.new
-        @unit.build_brand
+        @unit.build_faction
     end
 
     def create
         @unit = Unit.new(unit_params)
-        @unit.user_id = session[:user_id]
+        @unit.user_ids = session[:user_id]
         if @unit.save
             redirect_to unit_path(@unit)
         else

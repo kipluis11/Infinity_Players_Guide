@@ -2,8 +2,8 @@
 
 <% units.each do |u| %>
 
-    <h2><%= u.faction.name %>
-    </h2>
+    <h2><%= u.faction.name %></h2>
+    <%= link_to "Rate a Unit", new_unit_player_rating_path(u.id) %>
     <div>
         <p><%= u.description %></p>
     </div>

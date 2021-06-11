@@ -19,18 +19,20 @@
 
     <p> Add a Faction if it does not exist </p>
     <div>
-      f.fields_for :faction do |a|
-        <%= b.label :name %>
-        <%= b.text_field :name %>
+      <%= f.fields_for :faction do |a| %>
+        <%= a.label :name %>
+        <%= a.text_field :name %>
+        
     </div>
 
-    <%= f.submit "Activate" %>
-   
+    <div>
+      <%= a.label :description %>
+      <%= a.text_area :description %>   
+    </div>
+    <% end %>
+    <br>
+    <%= f.submit "Activate" %>  
 <% end %>
 
 
 
-t.string "name"
-t.string "descrition"
-t.integer "faction_id"
-t.integer "user_id"

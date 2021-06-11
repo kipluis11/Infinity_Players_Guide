@@ -1,0 +1,7 @@
+<h1>All Player Ratings</h1>
+
+<ul>
+<% @player_ratings.each do |p| %>
+    <li><%= p.unit.faction %>: <%= p.title %> - <%= p.stars %></li><br>
+<% end %>
+</ul>
