@@ -1,0 +1,10 @@
+<h1>All Current Units</h1>
+
+<% units.each do |u| %>
+
+    <h2><%= u.faction.name %>
+    </h2>
+    <div>
+        <p><%= u.description %></p>
+    </div>
+<% end %>

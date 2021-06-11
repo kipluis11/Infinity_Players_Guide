@@ -15,6 +15,10 @@ class UnitsController < ApplicationController
         end
     end
 
+    def index
+        @units = Unit.all
+    end
+
     private
 
     def unit_params
