@@ -1,5 +1,7 @@
 <h1>Add a Unit for review!</h1>
 
+<%= render partial: 'layouts/error', locals: {object: @unit} %>
+
 <%= form_for(@unit) do |f|%>
     <div>
       <%= f.label :name %>
